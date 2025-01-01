@@ -7,6 +7,7 @@
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/FilesBacked.pdb
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -31,4 +32,3 @@
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/obj/Debug/net8.0/FilesBacked.pdb
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/obj/Debug/net8.0/FilesBacked.genruntimeconfig.cache
 /Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/obj/Debug/net8.0/ref/FilesBacked.dll
-/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll
