@@ -1,0 +1,9 @@
+# Bygg-filer
+
+bin
+
+obj
+
+# Http-test filer
+*.http
+
