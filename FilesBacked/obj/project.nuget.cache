@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mJOKMxDp1ckmZ8xved6LsZj0qORcQrsrZIj+oT6LOk3ilZDAGdEwkivX0HTrKh09saFPRXA9fp2v1r2cnWj1Ew==",
+  "dgSpecHash": "evxkIhZDZz8=",
   "success": true,
   "projectFilePath": "/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/FilesBacked.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,10 @@
     "/Users/amardeepsingh/.nuget/packages/swashbuckle.aspnetcore.annotations/7.2.0/swashbuckle.aspnetcore.annotations.7.2.0.nupkg.sha512",
     "/Users/amardeepsingh/.nuget/packages/swashbuckle.aspnetcore.swagger/7.2.0/swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",
     "/Users/amardeepsingh/.nuget/packages/swashbuckle.aspnetcore.swaggergen/7.2.0/swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512",
-    "/Users/amardeepsingh/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+    "/Users/amardeepsingh/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
+    "/Users/amardeepsingh/.nuget/packages/microsoft.netcore.app.ref/8.0.14/microsoft.netcore.app.ref.8.0.14.nupkg.sha512",
+    "/Users/amardeepsingh/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.14/microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512",
+    "/Users/amardeepsingh/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.14/microsoft.netcore.app.host.osx-x64.8.0.14.nupkg.sha512"
   ],
   "logs": []
 }
