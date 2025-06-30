@@ -509,11 +509,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/FilesBacked.csproj",
-      "projectName": "FilesBacked",
-      "projectPath": "/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/FilesBacked.csproj",
+      "projectUniqueName": "/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBackend/FilesBackend.csproj",
+      "projectName": "FilesBackend",
+      "projectPath": "/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBackend/FilesBackend.csproj",
       "packagesPath": "/Users/amardeepsingh/.nuget/packages/",
-      "outputPath": "/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBacked/obj/",
+      "outputPath": "/Users/amardeepsingh/RiderProjects/FilesBacked/FilesBackend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/amardeepsingh/.nuget/NuGet/NuGet.Config"

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace FilesBacked.Controllers;
+namespace FilesBackend.Controllers;
 
 [ApiController]
 [Route("files")]

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesBacked", "FilesBacked\FilesBacked.csproj", "{BC893CD4-FBA4-4290-85B7-BD26C11C88AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesBackend", "FilesBackend\FilesBackend.csproj", "{BC893CD4-FBA4-4290-85B7-BD26C11C88AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

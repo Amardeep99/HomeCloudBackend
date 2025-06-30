@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 
-namespace FilesBacked;
+namespace FilesBackend;
 
 public class Program
 {
