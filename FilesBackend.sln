@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesBackend", "FilesBackend\FilesBackend.csproj", "{BC893CD4-FBA4-4290-85B7-BD26C11C88AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesBackend.API", "FilesBackend.API\FilesBackend.API.csproj", "{BC893CD4-FBA4-4290-85B7-BD26C11C88AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesBackend.Services", "FilesBackend.Services\FilesBackend.Services.csproj", "{6EA5109F-8C9C-4D99-ADCC-DA89A22D6B73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesBackend.Database", "FilesBackend.Database\FilesBackend.Database.csproj", "{13421B92-95B2-4C1C-9440-58B0393E51AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{BC893CD4-FBA4-4290-85B7-BD26C11C88AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC893CD4-FBA4-4290-85B7-BD26C11C88AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC893CD4-FBA4-4290-85B7-BD26C11C88AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA5109F-8C9C-4D99-ADCC-DA89A22D6B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA5109F-8C9C-4D99-ADCC-DA89A22D6B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA5109F-8C9C-4D99-ADCC-DA89A22D6B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA5109F-8C9C-4D99-ADCC-DA89A22D6B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13421B92-95B2-4C1C-9440-58B0393E51AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13421B92-95B2-4C1C-9440-58B0393E51AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13421B92-95B2-4C1C-9440-58B0393E51AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13421B92-95B2-4C1C-9440-58B0393E51AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

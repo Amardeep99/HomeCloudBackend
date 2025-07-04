@@ -14,4 +14,9 @@
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\FilesBackend.Database\FilesBackend.Database.csproj" />
+      <ProjectReference Include="..\FilesBackend.Services\FilesBackend.Services.csproj" />
+    </ItemGroup>
+
 </Project>

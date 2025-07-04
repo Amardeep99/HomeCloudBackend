@@ -1,35 +1,32 @@
+using FilesBackend.Services;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using static System.IO.File;
 
 namespace FilesBackend.Controllers;
 
 [ApiController]
 [Route("files")]
-public class FilesController : ControllerBase
+public class FilesController(IFilesService filesService) : ControllerBase
 {
     [HttpGet("{filename}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public IActionResult Get([FromRoute] string filename)
     {
-        var filepath = Path.Combine(Directory.GetCurrentDirectory(), "Images", filename);
+        var filePath = filesService.GetFilepathIfFileExists(filename);
+        
+        if(filePath == null)
+            return NotFound("File not found");
 
-        if (!System.IO.File.Exists(filepath))
-            return NotFound("File does not exist");
-
-        var fileType = GetContentType(filepath);
-
-        return PhysicalFile(filepath, fileType, filename);
+        return PhysicalFile(filePath, filename);
     }
 
     [HttpGet("names")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IActionResult GetAllNames()
     {
-        var filepath = Path.Combine(Directory.GetCurrentDirectory(), "Images");
-
-        var filenames = Directory.GetFiles(filepath)
-            .Select(Path.GetFileName)
-            .ToList();
+        var filenames = filesService.GetAllFilesNames(); 
 
         return Ok(filenames);
     }
@@ -39,21 +36,29 @@ public class FilesController : ControllerBase
     [RequestFormLimits(MultipartBodyLengthLimit = 15L * 1024 * 1024 * 1024)] // For multipart/form-data specifically
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Post(IFormFile file)
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+
+    public async Task<IActionResult> Post(IFormFile? file)
     {
         if (file is null || file.Length == 0)
         {
             return BadRequest("File is empty or not provided");
         }
 
-        var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Images");
-        var filePath = Path.Combine(folderPath, file.FileName);
+        if(filesService.GetFilepathIfFileExists(file.FileName) != null)
+            return BadRequest($"File {file.FileName} already exists");
 
-        if (System.IO.File.Exists(filePath))
-            return BadRequest("File already exists");
-
-        await using var stream = new FileStream(filePath, FileMode.Create);
-        await file.CopyToAsync(stream);
+        await using var stream = filesService.GetStreamToAddFile();
+        
+        try
+        {
+            await file.CopyToAsync(stream);
+        }
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        }
+        
         return Ok($"File uploaded successfully: {file.FileName}");
     }
 
@@ -64,29 +69,11 @@ public class FilesController : ControllerBase
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public IActionResult Delete([FromRoute] string filename)
     {
-        var filepath = Path.Combine(Directory.GetCurrentDirectory(), "Images", filename);
-
-        if (!System.IO.File.Exists(filepath))
+        if (filesService.GetFilepathIfFileExists(filename) == null)
             return NotFound("File does not exist");
 
-        try
-        {
-            System.IO.File.Delete(filepath);
-            return Ok("File deleted successfully");
-        }
-        catch (Exception)
-        {
-            return BadRequest("File does not exist");
-        }
-    }
-
-    private string GetContentType(string path)
-    {
-        var provider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider();
-        if (!provider.TryGetContentType(path, out var contentType))
-        {
-            contentType = "application/octet-stream";
-        }
-        return contentType;
+        var success = filesService.DeleteFile(filename);
+        
+        return success ? Ok("File deleted successfully") : StatusCode(StatusCodes.Status500InternalServerError);
     }
 }

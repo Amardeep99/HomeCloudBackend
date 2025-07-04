@@ -1,3 +1,5 @@
+using FilesBackend.Database.Extensions;
+using FilesBackend.Services;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 
@@ -28,6 +30,10 @@ public class Program
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        
+        builder.Services.AddFilesDb(builder.Configuration);
+
+        builder.Services.AddTransient<IFilesService, FilesService>();
 
         builder.Services.AddControllers();
 

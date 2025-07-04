@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY . .
-RUN dotnet restore "./FilesBacked/FilesBacked.csproj" --disable-parallel
-RUN dotnet publish "./FilesBacked/FilesBacked.csproj" -c release -o /app --no-restore
+RUN dotnet restore "./FilesBacked/FilesBackend.csproj" --disable-parallel
+RUN dotnet publish "./FilesBacked/FilesBackend.csproj" -c release -o /app --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 
 WORKDIR /app
@@ -11,4 +11,4 @@ COPY Images /app/Images
 
 EXPOSE 5001
 
-ENTRYPOINT ["dotnet", "FilesBacked.dll"]
+ENTRYPOINT ["dotnet", "FilesBackend.dll"]
