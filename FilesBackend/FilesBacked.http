@@ -1,6 +1,0 @@
-@FilesBacked_HostAddress = http://localhost:5137
-
-GET {{FilesBacked_HostAddress}}/upload/
-Accept: application/json
-
-###
