@@ -1,3 +1,4 @@
+using FilesBackend.Configurations;
 using FilesBackend.Database.Extensions;
 using FilesBackend.Services;
 using Microsoft.AspNetCore.Http.Features;
@@ -10,34 +11,23 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        var services = builder.Services;
+        var configuration = builder.Configuration;
 
-        builder.Services.Configure<IISServerOptions>(options =>
-        {
-            options.MaxRequestBodySize = 15L * 1024 * 1024 * 1024; // 15 GB
-        });
+        services.ConfigureFileSizeLimit(configuration);
 
-        builder.Services.Configure<KestrelServerOptions>(options =>
-        {
-            options.Limits.MaxRequestBodySize = 15L * 1024 * 1024 * 1024; // 15 GB
-        });
+        services.AddAuthorization();
 
-        builder.Services.Configure<FormOptions>(options =>
-        {
-            options.MultipartBodyLengthLimit = 15L * 1024 * 1024 * 1024; // 15 GB
-        });
-
-        builder.Services.AddAuthorization();
-
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen();
         
-        builder.Services.AddFilesDb(builder.Configuration);
+        services.AddFilesDb(configuration);
 
-        builder.Services.AddTransient<IFilesService, FilesService>();
+        services.AddTransient<IFilesService, FilesService>();
 
-        builder.Services.AddControllers();
+        services.AddControllers();
 
-        builder.Services.AddCors(options =>
+        services.AddCors(options =>
         {
             options.AddPolicy("AllowAnyOrigin",
                 builder => builder

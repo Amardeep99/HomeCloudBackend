@@ -10,88 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0675de8f-c1f1-401b-a4c2-6608b9f660ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FilesBackend.Database/Extensions/FilesDbExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FilesBackend.Database/Models/FileEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FilesBackend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FilesBackend/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend.API/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.API/Controllers/FilesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend.API/FilesBackend.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.API/FilesBackend.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend.sln" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/Controllers/FilesController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/Controllers/PingController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/FilesBacked.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/FilesBackend.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/Images/csharp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/Images/react.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/Images/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/FilesBacked" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/FilesBacked.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/FilesBacked.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/FilesBackend.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/FilesBackend.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/Microsoft.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/bin/Debug/net8.0/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBacked.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBackend.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBackend.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBackend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBackend.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBackend.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/FilesBackend.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/apphost" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/ref/FilesBacked.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/refint/FilesBacked.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/staticwebassets/msbuild.build.FilesBacked.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.FilesBacked.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.FilesBacked.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/FilesBacked.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/FilesBacked.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/FilesBacked.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/FilesBackend.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/FilesBackend.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/FilesBackend.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FilesBackend/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/src.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/src.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/src.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/src.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/src.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/obj/src.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FilesBackend.API/Configurations/FileSizeConfigurations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +131,7 @@
       <workItem from="1735054442421" duration="5815000" />
       <workItem from="1735062566294" duration="6000" />
       <workItem from="1751301315209" duration="1913000" />
-      <workItem from="1751635576485" duration="6153000" />
+      <workItem from="1751635576485" duration="8042000" />
     </task>
     <servers />
   </component>
