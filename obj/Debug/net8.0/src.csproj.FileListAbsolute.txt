@@ -1,9 +1,0 @@
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.csproj.AssemblyReference.cache
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.GeneratedMSBuildEditorConfig.editorconfig
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.csproj.CoreCompileInputs.cache
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.MvcApplicationPartsAssemblyInfo.cs
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.MvcApplicationPartsAssemblyInfo.cache
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.sourcelink.json
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.dll
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/refint/src.dll
-/Users/amardeepsingh/RiderProjects/FilesBacked/obj/Debug/net8.0/src.pdb
