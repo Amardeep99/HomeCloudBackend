@@ -1,9 +1,12 @@
 # Bygg-filer
+bin/
+obj/
+**/bin/
+**/obj/
 
-bin
-
-obj
 
 # Http-test filer
 *.http
 
+# Database filer
+*.db

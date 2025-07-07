@@ -1,10 +1,13 @@
 ﻿using FilesBackend.Database.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace FilesBackend.Database;
-
-public class FilesDbContext(DbContextOptions<FilesDbContext> options) : DbContext(options)
+public class FilesDbContext : DbContext
 {
+    public FilesDbContext(DbContextOptions<FilesDbContext> options) : base(options)
+    {
+    }
     public DbSet<FileEntity> Files { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

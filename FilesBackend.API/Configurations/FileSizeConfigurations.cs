@@ -1,4 +1,5 @@
 using System.Net;
+using FilesBackend.Constants;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 
@@ -43,21 +44,5 @@ public static class FileSizeConfigurations
         services.ConfigureFileUploadSize(fileSize);
         
         return services;
-    }
-
-    private static class FileUploadSize
-    {
-        private static long Small { get; } = 10L * 1024 * 1024; // 10 MB
-        private static long Medium { get; } = 100L * 1024 * 1024; // 100 MB
-        private static long Large { get; } = 1L * 1024 * 1024 * 1024; // 1 GB
-        private static long ExtraLarge { get; } = 15L * 1024 * 1024 * 1024; // 15 GB
-
-        public static Dictionary<string, long> Limits { get; } = new()
-        {
-            { "Small", Small },
-            { "Medium", Medium },
-            { "Large", Large },
-            { "ExtraLarge", ExtraLarge }
-        };
     }
 }

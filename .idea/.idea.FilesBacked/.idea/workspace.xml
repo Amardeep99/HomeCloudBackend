@@ -10,8 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0675de8f-c1f1-401b-a4c2-6608b9f660ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FilesBackend.API/Configurations/FileSizeConfigurations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FilesBackend.API/Constants/FileUploadSize.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FilesBacked/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesBackend.API/Configurations/FileSizeConfigurations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.API/Configurations/FileSizeConfigurations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesBackend.API/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.API/Controllers/FilesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesBackend.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.API/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesBackend.Database/FilesBackend.Database.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.Database/FilesBackend.Database.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesBackend.Database/FilesDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.Database/FilesDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesBackend.Services/FilesBackend.Services.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.Services/FilesBackend.Services.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesBackend.Services/FilesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FilesBackend.Services/FilesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/src.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/src.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/src.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/src.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/src.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/src.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/src.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/src.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/src.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/src.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/src.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/src.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/src.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/src.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/src.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/obj/src.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +149,7 @@
       <workItem from="1735054442421" duration="5815000" />
       <workItem from="1735062566294" duration="6000" />
       <workItem from="1751301315209" duration="1913000" />
-      <workItem from="1751635576485" duration="8042000" />
+      <workItem from="1751635576485" duration="12976000" />
     </task>
     <servers />
   </component>
@@ -153,24 +171,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/FilesBackend.Services/FilesService.cs</url>
-          <line>26</line>
-          <properties documentPath="$PROJECT_DIR$/FilesBackend.Services/FilesService.cs" containingFunctionPresentation="Method 'GetAllFilesNames'">
-            <startOffsets>
-              <option value="662" />
-            </startOffsets>
-            <endOffsets>
-              <option value="663" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

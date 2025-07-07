@@ -1,8 +1,9 @@
 using FilesBackend.Configurations;
-using FilesBackend.Database.Extensions;
+using FilesBackend.Database;
 using FilesBackend.Services;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.EntityFrameworkCore;
 
 namespace FilesBackend;
 
@@ -20,8 +21,9 @@ public class Program
 
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-        
-        services.AddFilesDb(configuration);
+
+        services.AddDbContext<FilesDbContext>(options =>
+            options.UseSqlite(configuration.GetConnectionString("SQLite")));
 
         services.AddTransient<IFilesService, FilesService>();
 

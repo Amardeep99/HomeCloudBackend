@@ -1,55 +1,54 @@
-﻿using static System.IO.File;
+﻿using FilesBackend.Database;
+using FilesBackend.Database.Models;
+using Microsoft.EntityFrameworkCore;
+using static System.IO.File;
 
 namespace FilesBackend.Services;
 
 public interface IFilesService
 {
-    string? GetFilepathIfFileExists(string filename);
-    List<string> GetAllFilesNames();
+    Task<bool> CheckFileExists(string filename);
+    Task<List<string>>GetAllFilesNames();
     
-    Stream GetStreamToAddFile();
-    
-    bool DeleteFile(string filename);
+    Task AddFile(string filename, Stream fileStream, string contentType);
+    Task DeleteFile(string filename);
 }
 
-public class FilesService : IFilesService
+public class FilesService(FilesDbContext context) : IFilesService
 {
     private readonly string _filepath = Path.Combine(Directory.GetCurrentDirectory(), "Images");
     
-    public string? GetFilepathIfFileExists(string filename)
+    public async Task<bool> CheckFileExists(string filename)
     {
-        var filepath = Path.Combine(_filepath, filename);
-        
-        return !File.Exists(filepath) ? null : filepath;
+        return await context.Files.AnyAsync(x => x.FileName == filename);
     }
 
-    public List<string> GetAllFilesNames()
+    public async Task<List<string>> GetAllFilesNames()
     {
-        List<string> fileNames = new();
-        
-        fileNames.AddRange(Directory.GetFiles(_filepath));
-        
-        return fileNames;
+        return await context.Files.Select(f => f.FileName).ToListAsync();
     }
 
-    public Stream GetStreamToAddFile()
+    public async Task AddFile(string filename, Stream fileStream, string contentType)
     {
-        return new FileStream(_filepath, FileMode.Create);
-    }
+        using var memoryStream = new MemoryStream();
+        await fileStream.CopyToAsync(memoryStream);
+        var content = memoryStream.ToArray();
 
-    public bool DeleteFile(string filename)
-    {
-        var fileToDelete = Path.Combine(_filepath, filename);
-        
-        try
+        var fileEntity = new FileEntity
         {
-            File.Delete(fileToDelete);
-        }
-        catch (Exception)
-        {
-            return false;
-        }
+            FileName = filename,
+            Content = content,
+            ContentType = contentType,
+            Size = content.Length
+        };
+        
+        context.Files.Add(fileEntity);
+        await context.SaveChangesAsync();
+    }
 
-        return true;
+    public async Task DeleteFile(string filename)
+    {
+        context.Files.Remove(new FileEntity { FileName = filename });
+        await context.SaveChangesAsync();
     }
 }
