@@ -1,13 +1,14 @@
 ﻿using FilesBackend.Database;
 using FilesBackend.Database.Models;
 using Microsoft.EntityFrameworkCore;
-using static System.IO.File;
+
 
 namespace FilesBackend.Services;
 
 public interface IFilesService
 {
     Task<bool> CheckFileExists(string filename);
+    public Task<FileEntity?> GetFile(string filename);
     Task<List<string>>GetAllFilesNames();
     
     Task AddFile(string filename, Stream fileStream, string contentType);
@@ -21,6 +22,13 @@ public class FilesService(FilesDbContext context) : IFilesService
     public async Task<bool> CheckFileExists(string filename)
     {
         return await context.Files.AnyAsync(x => x.FileName == filename);
+    }
+
+    public async Task<FileEntity?> GetFile(string filename)
+    {
+        var fileEntity = await context.Files.FirstOrDefaultAsync(x => x.FileName == filename);
+
+        return fileEntity;
     }
 
     public async Task<List<string>> GetAllFilesNames()

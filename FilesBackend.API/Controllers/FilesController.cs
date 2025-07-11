@@ -1,23 +1,31 @@
 using FilesBackend.Services;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
-using static System.IO.File;
+using Microsoft.EntityFrameworkCore;
 
 namespace FilesBackend.Controllers;
 
 [ApiController]
 [Route("files")]
+
 public class FilesController(IFilesService filesService) : ControllerBase
 {
-    [HttpGet("exists/{filename}")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [HttpGet]
+    [ProducesResponseType(typeof(FileResult), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> CheckIfFileExists([FromRoute] string filename)
+    public async Task<IActionResult> Get(string filename)
     {
-        var file = await filesService.CheckFileExists(filename);
+        var fileEntity = await filesService.GetFile(filename);
         
-        return Ok(file);
+        if(fileEntity == null)
+            return NotFound();
+
+        return File(
+            fileEntity.Content,
+            fileEntity.ContentType,
+            fileEntity.FileName
+            );
     }
+    
 
     [HttpGet("names")]
     [ProducesResponseType(StatusCodes.Status200OK)]
