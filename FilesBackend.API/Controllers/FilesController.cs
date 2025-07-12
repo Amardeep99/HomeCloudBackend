@@ -1,4 +1,5 @@
 using FilesBackend.Services;
+using FilesBackend.Services.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,10 +10,10 @@ namespace FilesBackend.Controllers;
 
 public class FilesController(IFilesService filesService) : ControllerBase
 {
-    [HttpGet]
+    [HttpGet("download/{filename}")]
     [ProducesResponseType(typeof(FileResult), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> Get(string filename)
+    public async Task<IActionResult> Download(string filename)
     {
         var fileEntity = await filesService.GetFile(filename);
         
@@ -27,13 +28,22 @@ public class FilesController(IFilesService filesService) : ControllerBase
     }
     
 
-    [HttpGet("names")]
+    [HttpGet("all/names")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAllNames()
     {
         var filenames = await filesService.GetAllFilesNames(); 
 
         return Ok(filenames);
+    }
+
+    [HttpGet("all/metadata")]
+    [ProducesResponseType(typeof(FileMetadata), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetAllMetadata()
+    {
+        var files = await filesService.GetAllFileMetadata();
+        return Ok(files);
     }
 
     [HttpPost]
@@ -54,7 +64,7 @@ public class FilesController(IFilesService filesService) : ControllerBase
         var exists = await filesService.CheckFileExists(file.FileName);
 
         if (exists)
-            return Conflict("File already exists");
+            return Conflict("File with this name already exists");
         
         await using var stream = file.OpenReadStream();
 
@@ -68,7 +78,7 @@ public class FilesController(IFilesService filesService) : ControllerBase
         }
         catch (Exception)
         {
-            return StatusCode(500, "Internal server error");
+            return StatusCode(500, "Internal server error, error while uploading file");
         }
         
         return Ok();

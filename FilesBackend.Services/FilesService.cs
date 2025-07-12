@@ -1,5 +1,6 @@
 ﻿using FilesBackend.Database;
 using FilesBackend.Database.Models;
+using FilesBackend.Services.Dto;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -9,8 +10,8 @@ public interface IFilesService
 {
     Task<bool> CheckFileExists(string filename);
     public Task<FileEntity?> GetFile(string filename);
-    Task<List<string>>GetAllFilesNames();
-    
+    Task<List<string>> GetAllFilesNames();
+    Task<List<FileMetadata>> GetAllFileMetadata(); 
     Task AddFile(string filename, Stream fileStream, string contentType);
     Task DeleteFile(string filename);
 }
@@ -34,6 +35,11 @@ public class FilesService(FilesDbContext context) : IFilesService
     public async Task<List<string>> GetAllFilesNames()
     {
         return await context.Files.Select(f => f.FileName).ToListAsync();
+    }
+
+    public async Task<List<FileMetadata>> GetAllFileMetadata()
+    {
+        return await context.Files.Select(f => FileMetadata.Map(f)).ToListAsync();
     }
 
     public async Task AddFile(string filename, Stream fileStream, string contentType)
