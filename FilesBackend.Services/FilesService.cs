@@ -13,7 +13,7 @@ public interface IFilesService
     Task<List<string>> GetAllFilesNames();
     Task<List<FileMetadata>> GetAllFileMetadata(); 
     Task AddFile(string filename, Stream fileStream, string contentType);
-    Task DeleteFile(string filename);
+    Task<bool> DeleteFile(string filename);
 }
 
 public class FilesService(FilesDbContext context) : IFilesService
@@ -60,9 +60,15 @@ public class FilesService(FilesDbContext context) : IFilesService
         await context.SaveChangesAsync();
     }
 
-    public async Task DeleteFile(string filename)
+    public async Task<bool> DeleteFile(string filename)
     {
-        context.Files.Remove(new FileEntity { FileName = filename });
+        var fileToDelete = await context.Files.FirstOrDefaultAsync(x => x.FileName == filename);
+
+        if (fileToDelete == null)
+            return false;
+        
+        context.Files.Remove(fileToDelete);
         await context.SaveChangesAsync();
+        return true;
     }
 }
